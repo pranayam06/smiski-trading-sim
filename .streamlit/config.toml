@@ -1,0 +1,12 @@
+[client]
+showSidebarNavigation = false
+
+[theme]
+primaryColor = "#6D8A88"                # Muted sage green (gentle + vintage)
+backgroundColor = "#F8F6F2"             # Soft warm off-white (easy on eyes)
+secondaryBackgroundColor = "#E8E5DD"    # Pale beige (for sidebar/panels)
+textColor = "#2E2E2E"                   # Soft charcoal (not harsh black)
+font = "sans serif"                     # Clean and rounded default font
+
+[layout]
+wideMode = true
