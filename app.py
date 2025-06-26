@@ -69,5 +69,4 @@ with st.sidebar:
     st.page_link("pages/bubbles_page.py", label="Paper Airplane", icon="✈️", use_container_width=True)  
     st.page_link("pages/bubbles_page.py", label="Sunbathing", icon="☀️", use_container_width=True)  
     st.divider()
-
-   link_home = st.page_link("app.py", label = "", icon=":material/home:")
+    link_home = st.page_link("app.py", label = "", icon=":material/home:")

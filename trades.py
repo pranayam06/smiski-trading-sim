@@ -10,5 +10,5 @@ def buy_shares(price, count, typ_smiski):
     enq_stocks(typ_smiski, count, price)
 
 def sell_shares(price, count, typ_smiski):
-    set_budget(get_budget() + deq_stocks(typ_smiski), count, price)
+    deq_stocks(typ_smiski, count, price)
     

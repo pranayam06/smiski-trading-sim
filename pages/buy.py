@@ -12,15 +12,21 @@ st.toggle("market open?", key= "market_open")
 update_market_safe() 
 image_dict = {"Bubbles": "images/blowing-bubbles.png"} 
 
-image_link = image_dict[st.session_state.get("underlying_typ")]
+selected_typ = st.session_state.get("underlying_typ")
+image_link = image_dict[selected_typ]
 st.image(image_link)  
-print(st.session_state.get("selected_price"))
 selected_price = st.session_state.get("selected_price")
+print(st.session_state.get("selected_price"))
 #dropdown for count  
 maxCount = get_budget() / selected_price 
 count = st.slider("How many do you want to buy?", 0, int(maxCount))
 
+total_price = selected_price * count
+st.text(f"Total Price: {total_price * 10000 // 100 / 100}")
 
+if st.button("Buy"): 
+    buy_shares(selected_price, count, selected_typ)
+    st.switch_page("app.py")
 
 # sidebar
 with st.sidebar:
